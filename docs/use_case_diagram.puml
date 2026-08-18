@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Admin" as A_U2cl3UubBqgLuYQQgA64_45
+actor "Student" as A_U2cl3UubBqgLuYQQgA64_46
+actor "Class Representative" as A_U2cl3UubBqgLuYQQgA64_47
+actor "Faculty" as A_U2cl3UubBqgLuYQQgA64_50
+actor "Notification Gateway" as A_U2cl3UubBqgLuYQQgA64_52
+
+usecase "LOGIN" as UC_U2cl3UubBqgLuYQQgA64_42
+usecase "Manage Timetable(create/edit)" as UC_U2cl3UubBqgLuYQQgA64_53
+usecase "Manage users and roles" as UC_U2cl3UubBqgLuYQQgA64_60
+usecase "View personal timetable" as UC_U2cl3UubBqgLuYQQgA64_63
+usecase "Book classroom" as UC_U2cl3UubBqgLuYQQgA64_67
+usecase "Report class cancellation" as UC_U2cl3UubBqgLuYQQgA64_69
+usecase "Find empty room" as UC_U2cl3UubBqgLuYQQgA64_71
+usecase "send class reminders" as UC_U2cl3UubBqgLuYQQgA64_77
+usecase "Shift of classroom" as UC_U2cl3UubBqgLuYQQgA64_82
+usecase "Send SMS/email Notification" as UC_U2cl3UubBqgLuYQQgA64_87
+
+UC_U2cl3UubBqgLuYQQgA64_71 ..> UC_U2cl3UubBqgLuYQQgA64_67
+UC_U2cl3UubBqgLuYQQgA64_77 ..> UC_U2cl3UubBqgLuYQQgA64_87
+UC_U2cl3UubBqgLuYQQgA64_87 ..> UC_U2cl3UubBqgLuYQQgA64_67
+UC_U2cl3UubBqgLuYQQgA64_87 ..> UC_U2cl3UubBqgLuYQQgA64_69
+UC_U2cl3UubBqgLuYQQgA64_82 ..> UC_U2cl3UubBqgLuYQQgA64_87
+@enduml
