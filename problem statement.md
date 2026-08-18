@@ -1,3 +1,10 @@
+ **TeamID 2:**  
+  Bhatt Pooja Jignesh  (20251501046)   
+  Aeshvi Kalathiya       (20251501014)  
+  Aayushi Bharoliya     (20251501045)  
+  Aaditya Verma	          (20251501013)  
+  Ashish Anand           (20251501031)  
+  
 **SpaceTime \- Smart Classroom Management System**
 
 **The main aim:**  
@@ -34,12 +41,7 @@ SpaceTime aims to provide a centralized system for managing timetables, classroo
   \-Upcoming classes.  
   \-Classroom changes.  
   \-Class cancellations.  
-  **TeamID 2:**  
-  Bhatt Pooja Jignesh  (20251501046)   
-  Aeshvi Kalathiya       (20251501014)  
-  Aayushi Bharoliya     (20251501045)  
-  Aaditya Verma	          (20251501013)  
-  Ashish Anand           (20251501031)  
+ 
     
   
 
