@@ -13,14 +13,14 @@ Names: Bhatt Pooja Jignesh	(20251501046)
 | Knows the assigned classroom | classrooms |
 | Knows the scheduled time | Timetable |
 | Is part of timetable entry | Timetable |
-| Trigger a remainder before it starts | Remainder |
+| Trigger a reminder before it starts | Reminder |
 | Can be cancelled  | Timetable |
 
 |                                            Timetable |  |
 | :---- | :---- |
 | Maintains the list of scheduled class  | Class |
 | Display classes for a given day | Class,Subject |
-| Provides scheduled data to generate remainders | Remainder |
+| Provides scheduled data to generate reminders | Reminder |
 | Updates when a class is added, changed, or cancelled | Class |
 | Associated classes with classrooms | Classroom |
 
@@ -31,7 +31,7 @@ Names: Bhatt Pooja Jignesh	(20251501046)
 | Gets booked for regular or extra classes  | Booking |
 | Is linked to a scheduled class  | Class |
 | Confirms or rejects a booking request  | Booking |
-| Supplies location info for reminders  | Remainder |
+| Supplies location info for reminders  | Reminder |
 
 |                          Subject |  |
 | :---- | :---- |
@@ -52,9 +52,9 @@ Names: Bhatt Pooja Jignesh	(20251501046)
 | Represents a class scheduled outside the regular timetable  | Booking  |
 | Requests a classroom booking to be held  | Booking,classroom |
 | Stores its own time/date once confirmed  | Booking  |
-| Notifies students/faculty once scheduled  | Remainder |
+| Notifies students/faculty once scheduled  | Reminder |
 
-|                     Remainder |  |
+|                     Reminder |  |
 | :---- | :---- |
 | Generates a notification before a class starts  | Class  |
 | Sends the reminder to relevant recipients  | Class  |
