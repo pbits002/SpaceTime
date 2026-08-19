@@ -1,0 +1,51 @@
+@startuml 
+
+object "profSharma :faculty" as profSharma {
+  name="prof A.sharma"
+  faculty="F021"
+  departmentt = "database system"
+}
+
+object "issue1:IssueReport" as issue1 {
+  issueid = "issue207"
+  description = "wifi not working"
+  status = "open"
+  Time = "9:15 AM"
+  Date = "12/08/2026"
+}
+
+object "session2:classSession" as session2 {
+  subject="Database System"
+  day = Monday
+  startTime = 11:00
+  endTime = 12:00
+  Status = "ongoing"
+}
+
+object "room9025:classroom" as room9025 {
+  roomNo = "9025"
+  capacity = 50
+  status = "occupied"
+}
+
+object "Admin:Administrator" as Admin {
+  name = "Ms Rina Shah"
+  adminId = "A020"
+  role = "facility Manager"
+}
+
+object "notify:notification" as notify {
+  notiification = "N612"
+  message = "technician assigned for 9205 wifi issue"
+  sentTo = "prof.A.Sharma"
+  timestamp = "9:20 AM"
+}
+
+profSharma -- issue1
+issue1 -- session2 : during session
+issue1 -- room9025 : concern room
+issue1 -- Admin : sent to
+profSharma -- notify : received by
+Admin -- notify : generate
+
+@enduml
