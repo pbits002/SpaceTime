@@ -15,8 +15,8 @@ public final class jdbcConnection {
     public static Connection getConnection() throws SQLException {
         String url = System.getenv().getOrDefault("DB_URL",
                 "jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/SpaceTime*?sslMode=REQUIRED");
-        String username = System.getenv().getOrDefault("DB_USER", "4EDq3eeeBSXPx94.root");
-        String password = System.getenv().getOrDefault("DB_PASSWORD", "x53P86lG7ZPe6ddx");
+        String username = System.getenv().getOrDefault("DB_USER", "");
+        String password = System.getenv().getOrDefault("DB_PASSWORD", "");
         return DriverManager.getConnection(url, username, password);
     }
 
