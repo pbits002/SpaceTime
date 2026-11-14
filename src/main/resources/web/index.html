@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SpaceTime | College Management</title>
+
+    <!-- Panda theme font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="panda-face" viewBox="0 0 200 180">
+            <circle cx="52" cy="40" r="22" fill="#1A1A1A"/>
+            <circle cx="148" cy="40" r="22" fill="#1A1A1A"/>
+            <ellipse cx="100" cy="100" rx="68" ry="60" fill="#FFFFFF"/>
+            <ellipse cx="72" cy="92" rx="15" ry="21" transform="rotate(-20 72 92)" fill="#1A1A1A"/>
+            <ellipse cx="128" cy="92" rx="15" ry="21" transform="rotate(20 128 92)" fill="#1A1A1A"/>
+            <circle cx="74" cy="90" r="5" fill="#FFFFFF"/>
+            <circle cx="126" cy="90" r="5" fill="#FFFFFF"/>
+            <ellipse cx="100" cy="117" rx="9" ry="6" fill="#1A1A1A"/>
+            <path d="M91 129 Q100 138 109 129" stroke="#1A1A1A" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </symbol>
+    </svg>
+
+    <!-- LOGIN PAGE -->
+    <div id="login" class="login">
+
+        <div class="login-card">
+
+            <div class="login-art" aria-hidden="true">
+                <svg class="bamboo bamboo-left" viewBox="0 0 14 130"><rect width="14" height="130" rx="7"/><rect y="40" width="14" height="3"/><rect y="80" width="14" height="3"/></svg>
+                <svg class="panda" viewBox="0 0 200 180"><use href="#panda-face"/></svg>
+                <svg class="bamboo bamboo-right" viewBox="0 0 14 110"><rect width="14" height="110" rx="7"/><rect y="40" width="14" height="3"/></svg>
+                <p>Your next class, always on time</p>
+            </div>
+
+            <!--login form -->
+            <div class="login-form">
+
+                <div class="logo">SpaceTime</div>
+
+                <h1>Welcome</h1>
+
+                <p class="lead">Smart Classroom Management System</p>
+
+                <form id="loginForm">
+
+                    <label>
+                        College ID
+                        <input
+                            id="collegeId"
+                            name="id"
+                            required
+                            placeholder="Enter college ID"
+                            autocomplete="username"
+                        >
+                    </label>
+
+                    <label>
+                        Password
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            required
+                            placeholder="Enter password"
+                            autocomplete="current-password"
+                        >
+                    </label>
+
+                    <label id="semesterLabel">
+                        Semester (Students / CR only)
+
+                        <select id="semester" name="semester">
+                            <option value="">Select semester</option>
+                            <option value="1">Semester 1</option>
+                            <option value="2">Semester 2</option>
+                            <option value="3">Semester 3</option>
+                            <option value="4">Semester 4</option>
+                            <option value="5">Semester 5</option>
+                            <option value="6">Semester 6</option>
+                            <option value="7">Semester 7</option>
+                            <option value="8">Semester 8</option>
+                        </select>
+                    </label>
+
+                    <button type="submit">Sign in →</button>
+
+                </form>
+
+                <small>
+                    Sign in using your registered college ID.
+                    Students and CRs must select their semester.
+                    Faculty and administrators can leave it blank.
+                </small>
+
+                <button type="button" id="showSignup" class="secondary">
+                    First time? Create password
+                </button>
+
+                <!-- ACCOUNT ACTIVATION -->
+                <form id="signupForm" hidden>
+
+                    <h2>Activate College ID</h2>
+
+                    <label>
+                        Registered College ID
+                        <input name="id" required placeholder="Enter registered ID">
+                    </label>
+
+                    <label>
+                        Activation Code
+                        <input name="activation" type="password" required placeholder="Code from administrator">
+                    </label>
+
+                    <label>
+                        Create Password
+                        <input
+                            name="password"
+                            type="password"
+                            minlength="10"
+                            required
+                            autocomplete="new-password"
+                            placeholder="Minimum 10 characters"
+                        >
+                    </label>
+
+                    <button type="submit">Create Account</button>
+
+                </form>
+
+                <p id="loginError" class="error" role="alert"></p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APPLICATION -->
+    <div id="app" hidden>
+
+        <aside>
+
+            <div class="logo logo-side">
+                <svg class="logo-panda" viewBox="0 0 200 180" aria-hidden="true"><use href="#panda-face"/></svg>
+                SpaceTime
+            </div>
+
+            <p class="muted">COLLEGE PORTAL</p>
+
+            <nav>
+                <button type="button" data-tab="timetable" class="active"># Timetable</button>
+                <button type="button" data-tab="rooms"># Live Rooms</button>
+                <button type="button" data-tab="notifications"># Notifications</button>
+                <button type="button" data-tab="issues" class="restricted"># Report Issue</button>
+                <button type="button" data-tab="bookings" class="restricted"># Bookings</button>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <span id="who"></span>
+                <button type="button" id="logout">Log out</button>
+            </div>
+
+        </aside>
+
+        <!-- DASHBOARD -->
+        <main>
+
+            <header>
+
+                <div>
+                    <div class="eyebrow">SMART CLASSROOM MANAGEMENT</div>
+                    <h1 id="heading">Dashboard</h1>
+                    <p id="subtitle">Your college at a glance.</p>
+                </div>
+
+                <span class="pill" id="role"></span>
+
+            </header>
+
+            <!-- SUMMARY -->
+            <div class="summary">
+
+                <article>
+                    <span>Today</span>
+                    <strong id="today"></strong>
+                </article>
+
+                <article>
+                    <span>My Role</span>
+                    <strong id="myRole"></strong>
+                </article>
+
+                <article>
+                    <span>Room Availability</span>
+                    <strong>Current Status</strong>
+                </article>
+
+            </div>
+
+            <!-- DYNAMIC CONTENT -->
+            <section class="panel" id="content"></section>
+
+            <p id="toast" role="status"></p>
+
+        </main>
+
+    </div>
+
+    <script src="/app.js"></script>
+
+</body>
+</html>
